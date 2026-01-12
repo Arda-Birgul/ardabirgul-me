@@ -274,10 +274,10 @@ function formatFiyat(value) {
                     <h4>Vizyon & Felsefe</h4>
                   </div>
                   <div class="vision-content">
-                    <p class="vision-quote">"Full-Stack = Donanım + Yazılım"</p>
+                    <p class="vision-quote">"Fikir → Prototip → Ürün"</p>
                     <p class="vision-text">
-                      Sadece Frontend-Backend değil, elektronik devre tasarımından 3D baskıya kadar
-                      tüm üretim sürecini kapsayan bir mühendislik anlayışı.
+                      Sadece kod yazmıyorum; elektronik devre tasarlıyor, PCB üretiyorum, yazılım
+                      geliştiriyorum ve fiziksel ürüne dönüştürüyorum.
                     </p>
                     <div class="vision-tags">
                       <span class="vision-tag">Gömülü</span>

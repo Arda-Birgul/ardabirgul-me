@@ -14,7 +14,6 @@
 
     <meta name="author" content="Arda Birgül" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ardabirgul.me/" />
     <meta property="og:title" content="Arda Birgül | Full-Stack & Gömülü Sistemler Geliştirici" />
@@ -23,6 +22,28 @@
       content="Arda Birgül'ün kişisel portfolyosu. Vue.js, Flutter ve Gömülü Sistemler (IoT) projeleri."
     />
     <meta property="og:image" content="https://ardabirgul.me/og-image.jpg" />
+
+    <link rel="canonical" href="https://ardabirgul.me/" />
+
+    <script>
+      ;(function () {
+        const allowedHosts = ['ardabirgul.me', 'www.ardabirgul.me', 'localhost', '127.0.0.1']
+
+        const currentHost = window.location.hostname
+
+        if (!allowedHosts.includes(currentHost)) {
+          const targetUrl =
+            'https://ardabirgul.me' +
+            window.location.pathname +
+            window.location.search +
+            window.location.hash
+
+          if (currentHost !== 'ardabirgul.me') {
+            window.location.replace(targetUrl)
+          }
+        }
+      })()
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
