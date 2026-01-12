@@ -1,6 +1,6 @@
 {
   "name": "ardabirgul-me",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -16,8 +16,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
-    "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
+    "vue": "^3.5.26"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",

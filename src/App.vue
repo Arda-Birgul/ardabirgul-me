@@ -98,9 +98,7 @@ watch(
   { immediate: true },
 )
 
-// ═══════════════════════════════════════════════════════════════
-// HELPER FONKSIYONLAR
-// ═══════════════════════════════════════════════════════════════
+// Yardımcı Fonksiyonlar
 function formatFiyat(value) {
   if (isNaN(value) || !isFinite(value)) return '0.00'
   return value.toFixed(2)
@@ -124,7 +122,7 @@ function formatFiyat(value) {
             <li class="nav-item nav-dropdown" @click.stop>
               <a
                 href="#"
-                class="nav-link dropdown-toggle"
+                class="nav-link"
                 :class="{ active: aktifSekme === 'printcost' || aktifSekme === 'baremetal' }"
                 @click.prevent="dropdownOpen = !dropdownOpen"
               >
@@ -196,17 +194,13 @@ function formatFiyat(value) {
       </div>
     </nav>
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         MAIN CONTENT
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- Ana İçerik -->
     <main class="main-content">
-      <!-- ═══════════════════════════════════════════════════════════════
-           PAGE 1: HAKKIMDA
-           ═══════════════════════════════════════════════════════════════ -->
+      <!-- Sayfa: Hakkımda -->
       <section v-if="aktifSekme === 'hakkimda'" class="page page-hakkimda">
         <div class="hakkimda-container">
           <div class="hakkimda-layout">
-            <!-- Sol Kolon: Intro -->
+            <!-- Sol Kolon: Giriş -->
             <div class="intro-col">
               <div class="intro-content">
                 <p class="intro-greeting">Merhaba, ben</p>
@@ -260,9 +254,9 @@ function formatFiyat(value) {
             <!-- Sağ Kolon: Bento Grid -->
             <div class="bento-col">
               <div class="bento-grid">
-                <!-- ═══ SOL KOLON ═══ -->
+                <!-- Sol Sütun -->
 
-                <!-- Vizyon & Felsefe Kartı (Sol Üst) -->
+                <!-- Kart: Vizyon & Felsefe -->
                 <div class="bento-card bento-vision">
                   <div class="card-header">
                     <svg
@@ -286,14 +280,14 @@ function formatFiyat(value) {
                       tüm üretim sürecini kapsayan bir mühendislik anlayışı.
                     </p>
                     <div class="vision-tags">
-                      <span class="vision-tag">AgriTech</span>
+                      <span class="vision-tag">Gömülü</span>
                       <span class="vision-tag">IoT</span>
                       <span class="vision-tag">Otomasyon</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- Eğitim Kartı (Sol Alt 1) -->
+                <!-- Kart: Eğitim -->
                 <div class="bento-card bento-education">
                   <div class="card-header">
                     <svg
@@ -316,7 +310,7 @@ function formatFiyat(value) {
                   </div>
                 </div>
 
-                <!-- Araçlar & Üretim Kartı (Alt Geniş) -->
+                <!-- Kart: Araçlar & Üretim -->
                 <div class="bento-card bento-tools">
                   <div class="card-header">
                     <svg
@@ -400,7 +394,7 @@ function formatFiyat(value) {
                   </div>
                 </div>
 
-                <!-- ═══ SAĞ KOLON - TECH STACK (Dev Dikey Kart) ═══ -->
+                <!-- Sağ Sütun: Tech Stack -->
                 <div class="bento-card bento-techstack">
                   <div class="card-header">
                     <svg
@@ -417,7 +411,7 @@ function formatFiyat(value) {
                     <h4>Tech Stack</h4>
                   </div>
 
-                  <!-- Mobile Section -->
+                  <!-- Bölüm: Mobil -->
                   <div class="stack-section">
                     <span class="stack-label">Mobile</span>
                     <div class="stack-items">
@@ -432,7 +426,7 @@ function formatFiyat(value) {
                     </div>
                   </div>
 
-                  <!-- Gömülü Section -->
+                  <!-- Bölüm: Gömülü -->
                   <div class="stack-section">
                     <span class="stack-label">Gömülü</span>
                     <div class="stack-items">
@@ -451,7 +445,7 @@ function formatFiyat(value) {
                     </div>
                   </div>
 
-                  <!-- Tasarım Section -->
+                  <!-- Bölüm: Tasarım -->
                   <div class="stack-section">
                     <span class="stack-label">Tasarım</span>
                     <div class="stack-items">
@@ -470,7 +464,7 @@ function formatFiyat(value) {
                     </div>
                   </div>
 
-                  <!-- Web Section -->
+                  <!-- Bölüm: Web -->
                   <div class="stack-section">
                     <span class="stack-label">Web</span>
                     <div class="stack-items">
@@ -495,11 +489,9 @@ function formatFiyat(value) {
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════════════════════════
-           PAGE 2: PRINTCOST
-           ═══════════════════════════════════════════════════════════════ -->
+      <!-- Sayfa: PrintCost -->
       <section v-if="aktifSekme === 'printcost'" class="page page-printcost">
-        <!-- Animated Blobs -->
+        <!-- Animasyonlu Arkaplan -->
         <div class="blob-container">
           <div class="blob blob-1"></div>
           <div class="blob blob-2"></div>
@@ -513,9 +505,9 @@ function formatFiyat(value) {
             <p class="printcost-subtitle">3D Baskı Maliyet Hesaplayıcı</p>
           </div>
 
-          <!-- Glass Panel - Tüm içeriğin arkasında -->
+          <!-- Cam Panel -->
           <div class="glass-panel">
-            <!-- Satış Fiyatı Kartı - Üstte Geniş -->
+            <!-- Kart: Satış Fiyatı -->
             <div class="result-card-top">
               <div class="result-main">
                 <span class="result-label">Satış Fiyatı</span>
@@ -536,7 +528,7 @@ function formatFiyat(value) {
               </div>
             </div>
 
-            <!-- 2x2 Input Grid -->
+            <!-- Girdi Alanları -->
             <div class="inputs-grid">
               <div class="input-card">
                 <label class="input-label">Filament Fiyatı (TL/kg)</label>
@@ -577,7 +569,7 @@ function formatFiyat(value) {
               </div>
             </div>
 
-            <!-- Kâr Slider - En Altta -->
+            <!-- Slider: Kâr Oranı -->
             <div class="slider-card">
               <label class="input-label">
                 Kâr Oranı: <span class="profit-badge">%{{ karOrani }}</span>
@@ -593,9 +585,7 @@ function formatFiyat(value) {
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════════════════════════
-           PAGE 3: BARE METAL
-           ═══════════════════════════════════════════════════════════════ -->
+      <!-- Sayfa: Bare Metal -->
       <section v-if="aktifSekme === 'baremetal'" class="page page-baremetal">
         <div class="baremetal-container">
           <!-- Başlık -->
@@ -604,9 +594,9 @@ function formatFiyat(value) {
             <p class="baremetal-subtitle">ATmega328P Timer1 Kesme Tabanlı LED Yakıp Söndürme</p>
           </div>
 
-          <!-- Ana İçerik -->
+          <!-- İçerik -->
           <div class="baremetal-content">
-            <!-- Sol: Wokwi Simülasyon -->
+            <!-- Sol: Simülasyon -->
             <div class="simulation-section">
               <div class="simulation-card">
                 <div class="simulation-header">
@@ -638,7 +628,7 @@ function formatFiyat(value) {
               </div>
             </div>
 
-            <!-- Sağ: Teknik Detaylar -->
+            <!-- Sağ: Detaylar -->
             <div class="details-section">
               <!-- Teknik Özellikler -->
               <div class="specs-card">
@@ -708,7 +698,7 @@ function formatFiyat(value) {
             </div>
           </div>
 
-          <!-- Kod Örneği -->
+          <!-- Kod Bloğu -->
           <div class="code-section">
             <div class="terminal-card">
               <div class="terminal-header">
@@ -771,7 +761,7 @@ function formatFiyat(value) {
             </div>
           </div>
 
-          <!-- Formül Açıklaması -->
+          <!-- Formül -->
           <div class="formula-section">
             <div class="formula-card">
               <h4 class="card-title">Frekans Hesaplaması</h4>
@@ -788,9 +778,7 @@ function formatFiyat(value) {
       </section>
     </main>
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         FOOTER
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- Alt Bilgi -->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -804,9 +792,7 @@ function formatFiyat(value) {
 </template>
 
 <style>
-/* ═══════════════════════════════════════════════════════════════
-   GLOBAL CSS VARIABLES - Flutter Renk Paleti
-   ═══════════════════════════════════════════════════════════════ */
+/* Global Değişkenler */
 :root {
   /* Hakkımda Theme */
   --bg-beige: #f5f5dc;
@@ -832,9 +818,7 @@ function formatFiyat(value) {
 </style>
 
 <style scoped>
-/* ═══════════════════════════════════════════════════════════════
-   BASE & RESET
-   ═══════════════════════════════════════════════════════════════ */
+/* Temel Ayarlar */
 * {
   margin: 0;
   padding: 0;
@@ -865,9 +849,7 @@ function formatFiyat(value) {
   background: var(--dark-bg);
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   BOOTSTRAP GRID OVERRIDE (Mobile First)
-   ═══════════════════════════════════════════════════════════════ */
+/* Grid Sistemi */
 .container {
   width: 90%;
   max-width: 1400px;
@@ -885,7 +867,7 @@ function formatFiyat(value) {
   padding: 0 0.75rem;
 }
 
-/* Mobile First Columns */
+/* Mobil Öncelikli Kolonlar */
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
@@ -937,9 +919,7 @@ function formatFiyat(value) {
   margin-bottom: 1.5rem;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   NAVBAR - Always Visible, No Hamburger
-   ═══════════════════════════════════════════════════════════════ */
+/* Navbar */
 .navbar {
   height: 60px;
   padding: 0;
@@ -982,7 +962,7 @@ function formatFiyat(value) {
   font-weight: 300;
 }
 
-/* Navigation - Always Visible */
+/* Navigasyon */
 .navbar-menu {
   display: flex;
 }
@@ -1034,24 +1014,22 @@ function formatFiyat(value) {
   background: transparent;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   DROPDOWN - Güçlendirilmiş, Reflow Engellemeli
-   ═══════════════════════════════════════════════════════════════ */
+/* Açılır Menü */
 
-/* Navbar ve container overflow kontrolü */
+/* Taşma Kontrolü */
 .navbar,
 .navbar-container,
 .navbar-menu {
   overflow: visible !important;
 }
 
-/* Parent konumlama */
+/* Konumlandırma */
 .navbar .nav-item.nav-dropdown {
   position: relative;
   z-index: 10;
 }
 
-/* Projelerim butonu - her zaman beyaz */
+/* Menü Butonu */
 .navbar .nav-item.nav-dropdown > .nav-link {
   color: white !important;
   background: transparent !important;
@@ -1062,7 +1040,7 @@ function formatFiyat(value) {
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Ok animasyonu */
+/* Ok Animasyonu */
 .dropdown-arrow {
   transition: transform 0.18s ease;
   margin-left: 4px;
@@ -1072,7 +1050,7 @@ function formatFiyat(value) {
   transform: rotate(180deg);
 }
 
-/* Dropdown panel - opacity/visibility ile kontrol (reflow yok) */
+/* Panel Görünürlüğü */
 .navbar .nav-item.nav-dropdown .dropdown-menu {
   position: absolute !important;
   top: calc(100% + 8px);
@@ -1089,7 +1067,7 @@ function formatFiyat(value) {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  /* Animasyon - akışı etkilemez */
+  /* Animasyon */
   transform-origin: top left;
   transform: translateY(-6px);
   opacity: 0;
@@ -1105,7 +1083,7 @@ function formatFiyat(value) {
   list-style: none;
 }
 
-/* Gösterme durumu */
+/* Aktif Durum */
 .navbar .nav-item.nav-dropdown .dropdown-menu.show {
   transform: translateY(0);
   opacity: 1;
@@ -1162,9 +1140,7 @@ function formatFiyat(value) {
   margin-left: auto;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   MAIN CONTENT
-   ═══════════════════════════════════════════════════════════════ */
+/* Ana İçerik */
 .main-content {
   padding-top: 60px;
   min-height: 100vh;
@@ -1185,9 +1161,7 @@ function formatFiyat(value) {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE 1: HAKKIMDA - Professional Layout
-   ═══════════════════════════════════════════════════════════════ */
+/* Sayfa: Hakkımda */
 .page-hakkimda {
   color: var(--text-dark);
   min-height: calc(100vh - 60px);
@@ -1210,7 +1184,7 @@ function formatFiyat(value) {
   align-items: center;
 }
 
-/* Intro Column */
+/* Giriş Kolonu */
 .intro-col {
   order: 1;
 }
@@ -1320,7 +1294,7 @@ function formatFiyat(value) {
   color: white;
 }
 
-/* Bento Grid - Compact 2x3 Layout */
+/* Bento Grid */
 .bento-col {
   order: 2;
 }
@@ -1364,7 +1338,7 @@ function formatFiyat(value) {
   letter-spacing: 0.5px;
 }
 
-/* ═══ VIZYON KARTI ═══ */
+/* Kart: Vizyon */
 .bento-vision {
   grid-column: 1;
   grid-row: 1;
@@ -1407,7 +1381,7 @@ function formatFiyat(value) {
   color: #2d8a6e;
 }
 
-/* ═══ EĞİTİM KARTI ═══ */
+/* Kart: Eğitim */
 .bento-education {
   grid-column: 1;
   grid-row: 2;
@@ -1437,7 +1411,7 @@ function formatFiyat(value) {
   margin-top: 0.15rem;
 }
 
-/* ═══ ARAÇLAR & ÜRETİM KARTI ═══ */
+/* Kart: Araçlar */
 .bento-tools {
   grid-column: 1;
   grid-row: 3;
@@ -1469,7 +1443,7 @@ function formatFiyat(value) {
   color: var(--text-dark);
 }
 
-/* ═══ TECH STACK KARTI (DEV DİKEY) ═══ */
+/* Kart: Tech Stack */
 .bento-techstack {
   grid-column: 2;
   grid-row: 1 / 4;
@@ -1620,9 +1594,7 @@ function formatFiyat(value) {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE 2: PRINTCOST
-   ═══════════════════════════════════════════════════════════════ */
+/* Sayfa: PrintCost */
 .page-printcost {
   position: relative;
   overflow: hidden;
@@ -1632,7 +1604,7 @@ function formatFiyat(value) {
   padding: 2rem 0;
 }
 
-/* Animated Blobs */
+/* Animasyonlu Arkaplan */
 .blob-container {
   position: absolute;
   inset: 0;
@@ -1691,7 +1663,7 @@ function formatFiyat(value) {
   }
 }
 
-/* PrintCost Container */
+/* Konteyner */
 .printcost-container {
   width: 90%;
   max-width: 800px;
@@ -1719,7 +1691,7 @@ function formatFiyat(value) {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Glass Panel - Ana Container */
+/* Cam Panel */
 .glass-panel {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
@@ -1729,7 +1701,7 @@ function formatFiyat(value) {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
-/* Result Card Top - Geniş Üst Kart */
+/* Sonuç Kartı */
 .result-card-top {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
@@ -1806,7 +1778,7 @@ function formatFiyat(value) {
   font-weight: 600;
 }
 
-/* 2x2 Input Grid */
+/* Girdi Izgarası */
 .inputs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1852,7 +1824,7 @@ function formatFiyat(value) {
   color: var(--text-muted);
 }
 
-/* Slider Card */
+/* Slider Kartı */
 .slider-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
@@ -1911,7 +1883,7 @@ function formatFiyat(value) {
   margin-top: 0.5rem;
 }
 
-/* PrintCost Responsive */
+/* Responsive */
 @media (max-width: 600px) {
   .result-card-top {
     flex-direction: column;
@@ -1934,9 +1906,7 @@ function formatFiyat(value) {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE 3: BARE METAL
-   ═══════════════════════════════════════════════════════════════ */
+/* Sayfa: Bare Metal */
 .page-baremetal {
   color: var(--text-light);
   min-height: calc(100vh - 60px);
@@ -1969,7 +1939,7 @@ function formatFiyat(value) {
   font-size: 1rem;
 }
 
-/* Ana İçerik Layout */
+/* Düzen */
 .baremetal-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1978,7 +1948,7 @@ function formatFiyat(value) {
   align-items: stretch;
 }
 
-/* Sol: Simülasyon Bölümü */
+/* Simülasyon */
 .simulation-section {
   display: flex;
   flex-direction: column;
@@ -2046,7 +2016,7 @@ function formatFiyat(value) {
   border: 2px solid rgba(255, 139, 139, 0.3);
 }
 
-/* Donanım Kartı */
+/* Donanım */
 .hardware-card {
   background: rgba(30, 30, 30, 0.9);
   border-radius: 16px;
@@ -2089,7 +2059,7 @@ function formatFiyat(value) {
   font-family: 'Courier New', monospace;
 }
 
-/* Sağ: Detaylar Bölümü */
+/* Detaylar */
 .details-section {
   display: flex;
   flex-direction: column;
@@ -2138,7 +2108,7 @@ function formatFiyat(value) {
   font-weight: 600;
 }
 
-/* Özellikler Listesi */
+/* Özellikler */
 .features-list {
   display: flex;
   flex-direction: column;
@@ -2173,7 +2143,7 @@ function formatFiyat(value) {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Kod Bölümü */
+/* Kod */
 .code-section {
   margin-bottom: 1.5rem;
 }
@@ -2248,7 +2218,7 @@ function formatFiyat(value) {
   color: #ce9178;
 }
 
-/* Formül Bölümü */
+/* Formül */
 .formula-section {
   margin-bottom: 1rem;
 }
@@ -2291,7 +2261,7 @@ function formatFiyat(value) {
   font-weight: 600;
 }
 
-/* Bare Metal Responsive */
+/* Responsive */
 @media (max-width: 900px) {
   .baremetal-content {
     grid-template-columns: 1fr;
@@ -2308,9 +2278,7 @@ function formatFiyat(value) {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   FOOTER
-   ═══════════════════════════════════════════════════════════════ */
+/* Alt Bilgi */
 .footer {
   padding: 1.5rem 0;
   text-align: center;
@@ -2337,9 +2305,7 @@ function formatFiyat(value) {
   margin: 0;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE ADJUSTMENTS
-   ═══════════════════════════════════════════════════════════════ */
+/* General Responsive */
 @media (max-width: 767px) {
   .page {
     padding: 2rem 0;
